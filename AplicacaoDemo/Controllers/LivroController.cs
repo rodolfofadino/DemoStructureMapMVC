@@ -13,6 +13,9 @@ namespace AplicacaoDemo.Controllers
             var repository = new Repository.LivroRepository();
             var livros = repository.GetAll();
 
+            if (!livros.Any())
+                return View("SemLivros");
+
             return View(livros);
         }
 	}
