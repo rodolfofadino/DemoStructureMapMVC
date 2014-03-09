@@ -3,7 +3,12 @@ using AplicacaoDemo.Models;
 
 namespace AplicacaoDemo.Repository
 {
-    public class LivroRepository
+    public interface ILivroRepository
+    {
+        List<Livro> GetAll();
+    }
+
+    public class LivroRepository : ILivroRepository
     {
         public List<Livro> GetAll()
         {
